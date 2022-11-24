@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 function News() {
     return (
         <div>
+            
             <Helmet>
                 <meta charSet="utf-8" />
                 <title> Tập pilates là gì? Những lợi ích của môn pilates </title>
