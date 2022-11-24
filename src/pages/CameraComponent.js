@@ -14,18 +14,21 @@ function CameraComponent() {
         if (isIPhone) {
             // window.webkit.messageHandlers.callbackHandler.postMessage("CloseApp");
             window.webkit.messageHandlers.openCamera.postMessage("");
+            console.log('Click iOS')
         } else if (isAndroid) {
             //09-03-2022 test with Hanh,Vo
+            console.log('Click Android Flutter')
             window.openCamera.postMessage("openCamera");
         }
         //  For Android
         if (window.appInterface !== undefined) {
+            console.log('Click Android Native')
             window.appInterface.postMessage("openCamera");
         }
-    }
+    }   
+    
     return (
         <div>
-
             <p>Chọn hình hoặc Chụp</p>
             <input type={"file"} onClick={openGalleryOrCameraMobile} ></input>
         </div>);
