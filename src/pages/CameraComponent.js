@@ -15,7 +15,7 @@ function CameraComponent() {
             // window.webkit.messageHandlers.callbackHandler.postMessage("CloseApp");
             window.webkit.messageHandlers.openCamera.postMessage("");
             console.log('Click iOS')
-        } else if (isAndroid) {
+        } else if (isAndroid && window.openCamera !== undefined) {
             //09-03-2022 test with Hanh,Vo
             console.log('Click Android Flutter')
             window.openCamera.postMessage("openCamera");
